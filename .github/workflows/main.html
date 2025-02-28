@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <title>Obscura - The OFM Inner Circle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#D8C07A">
+    <link rel="shortcut icon" href="wp-content/uploads/2024/01/ilio.png">
+    <link rel="icon" href="wp-content/uploads/2024/01/ilio.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/uploads/2024/01/ilio.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/uploads/2024/01/ilio.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="wp-content/uploads/2024/01/ilio.png">
+    <link rel="apple-touch-icon" href="wp-content/uploads/2024/01/ilio.png">
+
+    <!-- Import Oswald Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif; /* Default font for normal text */
+            line-height: 1.6;
+            color: #D8C07A; /* Gold text for all content */
+            background: linear-gradient(-45deg, #D8C07A, #000000, #D8C07A, #000000);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Black opacity overlay for the entire page */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+            z-index: -1;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+            background-image: url('https://gcdnb.pbrd.co/images/ETYOjN1LJpXY.webp?o=1');
+            background-size: cover; /* Fill the banner borders */
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(216, 192, 122, 0.8); /* Gold glow effect */
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease; /* Smooth transition for glow effect */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Enhanced glow effect on hover */
+        .banner:hover {
+            box-shadow: 0 0 40px rgba(216, 192, 122, 1); /* Increased glow on hover */
+        }
+
+        .banner h1 {
+            font-family: 'Oswald', sans-serif; /* Serious font for titles */
+            font-size: 2.5em;
+            color: #D8C07A; /* Gold color for headings */
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(216, 192, 122, 0.8); /* Glow effect for text */
+            transition: text-shadow 0.3s ease; /* Smooth transition for glow effect */
+            font-weight: 700; /* Bold text */
+            text-transform: uppercase; /* Capitalize title */
+        }
+
+        .banner h1:hover {
+            text-shadow: 0 0 20px rgba(216, 192, 122, 1); /* Increased glow on hover */
+        }
+
+        .banner .cta-button {
+            margin-top: 10px;
+        }
+
+        .content {
+            margin-top: 20px;
+            text-align: left;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .content h2 {
+            font-family: 'Oswald', sans-serif; /* Serious font for titles */
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #D8C07A; /* Gold color for headings */
+            transition: text-shadow 0.3s ease; /* Smooth transition for glow effect */
+            font-weight: 700; /* Bold text */
+            text-transform: uppercase; /* Capitalize title */
+        }
+
+        .content h2:hover {
+            text-shadow: 0 0 20px rgba(216, 192, 122, 1); /* Increased glow on hover */
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            transition: text-shadow 0.3s ease; /* Smooth transition for glow effect */
+            font-weight: 400; /* Normal text */
+        }
+
+        .content p:hover {
+            text-shadow: 0 0 10px rgba(216, 192, 122, 1); /* Glow effect on hover */
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            transition: text-shadow 0.3s ease; /* Smooth transition for glow effect */
+            font-weight: 400; /* Normal text */
+        }
+
+        .content ul li:hover {
+            text-shadow: 0 0 10px rgba(216, 192, 122, 1); /* Glow effect on hover */
+        }
+
+        .content ul li::before {
+            content: "✔";
+            color: #D8C07A;
+            margin-right: 10px;
+        }
+
+        /* Image Styles */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 48%; /* Adjust width as needed */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(216, 192, 122, 0.8); /* Gold glow effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 0 20px rgba(216, 192, 122, 1); /* Increased glow on hover */
+        }
+
+        /* Custom Button Styles */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: transparent; /* Transparent background */
+            color: #D8C07A; /* Gold text */
+            text-decoration: none;
+            border: 2px solid #D8C07A; /* Gold border */
+            border-radius: 0; /* Sharp edges */
+            font-size: 1.2em;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(216, 192, 122, 0.5); /* Gold glow */
+            font-weight: 700; /* Bold text */
+            font-family: 'Oswald', sans-serif; /* Serious font for buttons */
+            text-transform: uppercase; /* Capitalize button text */
+        }
+
+        .cta-button:hover {
+            background-color: #D8C07A; /* Gold background on hover */
+            color: #000; /* Black text on hover */
+            box-shadow: 0 0 20px rgba(216, 192, 122, 0.8); /* Stronger glow on hover */
+        }
+
+        /* Flicker animation for text when not hovered */
+        .cta-button:not(:hover) .glowing-txt {
+            animation: flicker 2s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5; /* Flicker to 50% opacity */
+            }
+        }
+
+        /* Glow effect for text */
+        .glowing-txt {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Center the button */
+        .center-button {
+            text-align: center;
+            margin-top: 40px; /* Add some space above the button */
+        }
+
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #D8C07A; /* Gold border at the top of the footer */
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #D8C07A; /* Gold text */
+        }
+
+        .footer .all-rights {
+            font-size: 0.9em;
+            color: #D8C07A; /* Gold text */
+            text-shadow: 0 0 5px rgba(216, 192, 122, 0.8); /* Subtle glow */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1>Welcome to Obscura - The OFM Inner Circle</h1>
+            <a href="https://t.me/obscuranet" class="cta-button">
+              <span class="glowing-txt"><b>JOIN MY TELEGRAM</b></span>
+            </a>
+        </div>
+
+        <!-- Main Content Section -->
+        <section class="content">
+            <h2>You ever see those guys on Twitter, in Lambos, cigars in hand, talking about "money printing machines"?</h2>
+            <p>Yeah, most of them are capping. But here’s the thing, some actually cracked the code.</p>
+            <p>I don’t sell courses. I don’t need to. My free content alone is worth more than the garbage people charge for. And if you don’t believe me, ask the people who’ve been inside Obscura, they’ve paid for guides before and said they don’t even come close.</p>
+            <p>But let’s be real. Not everyone deserves to win. Some people aren’t cut out for this. They’ll scroll past this page, keep their 9-5, and complain about life being expensive.</p>
+            <p>Others? They’ll take action, step inside, and start making money off one of the easiest digital hustles of our time.</p>
+
+            <!-- Image Container 1 -->
+            <div class="image-container">
+                <img src="https://gcdnb.pbrd.co/images/wajQ1dmGlP3N.png?o=1" alt="Lifestyle 1">
+                <img src="https://gcdnb.pbrd.co/images/OK9pBH3BxGTt.png?o=1" alt="Lifestyle 2">
+            </div>
+
+            <h2>What’s Inside the Free Obscura Channel?</h2>
+            <p>I don’t hold back. The free group alone gives you:</p>
+            <ul>
+                <li><b>Reddit Domination 101</b> – A 20,000-word guide on making Reddit work for you, not against you. People sell weaker versions of this for $200.</li>
+                <li><b>Chatting 101</b> – How to convert DMs into money, simple as that. If you can type, you can make bank.</li>
+                <li><b>Creators Advice</b> – Everything models wish their managers knew but don’t.</li>
+                <li><b>Recruiting 101</b> – Stop struggling to find models. They’re out there. You just don’t know how to approach them. Yet.</li>
+                <li><b>Success Stories</b> – Not theory. Real wins from people using my exact methods.</li>
+                <li><b>Manifesto</b> – If you don’t have the right mindset, you’re already dead in the water. Read this first.</li>
+            </ul>
+            <p>If that’s just the free section, imagine what’s inside the private group.</p>
+
+            <!-- Image Container 2 -->
+            <div class="image-container">
+                <img src="https://gcdnb.pbrd.co/images/oFiK1eVh6EjJ.png?o=1" alt="OF Top 0.48">
+                <img src="https://gcdnb.pbrd.co/images/iL7B8zOGx1DE.png?o=1" alt="OF Stats">
+            </div>
+
+            <h2>The Paid Side – Obscura Inner Circle</h2>
+            <p>This is for the ones who get it. If you’re the type to overthink spending a few bucks but drop $20 on Uber Eats, this ain’t for you.</p>
+            <p>Inside the private group, you’re getting:</p>
+            <ul>
+                <li><b>High-Level Game</b> – No fluff. Just straight systems and strategies that make money.</li>
+                <li><b>Daily Market Insights</b> – What's working right now in OFM? You’ll know before anyone else.</li>
+                <li><b>Advanced Recruiting Tactics</b> – How to get quality models without begging.</li>
+                <li><b>Elite Chatting Strategies</b> – The psychology behind getting customers hooked.</li>
+                <li><b>Tools & Automations</b> – Stop working harder, start working smarter.</li>
+                <li><b>Private Calls & Network</b> – The real game is played behind closed doors. You’ll be inside those doors.</li>
+            </ul>
+
+            <h2>Who This is For</h2>
+            <ul>
+                <li>You’re done being broke and ready to actually commit to a proven business model.</li>
+                <li>You want to be in an elite circle of winners, not just another Telegram spam group.</li>
+                <li>You understand that knowledge is leverage, and you’re ready to use it.</li>
+            </ul>
+
+            <h2>Who This is NOT For</h2>
+            <ul>
+                <li>If you’re looking for "push-button" money, this ain't for you. You will have to put in work.</li>
+                <li>If you’re scared to invest in yourself, stay broke.</li>
+                <li>If you need someone to hold your hand and "motivate" you, go buy a self-help book.</li>
+            </ul>
+
+            <h2>Get Inside Obscura</h2>
+            <p>Look, you don’t have to join. You can keep watching from the sidelines, waiting for "the right time." But just know—people inside are stacking while you’re thinking.</p>
+            <p><b>⚡ Step inside. You’ll never look at money the same again.</b></p>
+        </section>
+
+        <!-- Centered Button Section -->
+        <div class="center-button">
+            <a href="https://t.me/obscuranet" class="cta-button">
+              <span class="glowing-txt"><b>JOIN OBSCURA (FREE)</b></span>
+            </a>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>Step into the shadows of success—where the elite thrive and fortunes are forged.</p>
+            <p class="all-rights">© 2025 Obscura. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Simple Scripts -->
+    <script>
+        // Add any necessary JavaScript here
+        console.log('Welcome to Obscura!');
+    </script>
+</body>
+</html>
